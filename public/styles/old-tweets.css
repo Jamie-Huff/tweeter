@@ -1,8 +1,14 @@
 #old-tweet-section {
-  border: 1px solid black;
-  margin-top: 60px;
+  border: 2px solid black;
+  margin-top: 100px;
   padding: 20px;
+  padding-bottom: 0px;
   width: 60%;
+  transition: box-shadow .3s;
+}
+
+#old-tweet-section:hover {
+  box-shadow: 0 5px 200px rgba(0,0,0,0.3); 
 }
 
 #old-tweet-header {
@@ -19,10 +25,34 @@ border-bottom: 1px solid black;
   justify-content: space-between;
 }
 
-#old-post-photo {
-  width: 20%;
+#old-tweet-profile-photo {
+  width: 30%;
+  height: auto;
 }
 
 #old-tweet-name {
   display: flex;
+  padding-bottom: 20px;
+}
+
+#old-tweet-name-text {
+  padding-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#post-links {
+  color: blue
+}
+          #post-report:hover {
+            color: yellow
+          }
+          #post-retweet:hover {
+            color: yellow
+          }
+          #post-like:hover {
+            color: yellow
+          }
+
+#old-tweet-handle {
+  color: lightgrey;
 }
