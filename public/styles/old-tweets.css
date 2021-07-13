@@ -1,0 +1,28 @@
+#old-tweet-section {
+  border: 1px solid black;
+  margin-top: 60px;
+  padding: 20px;
+  width: 60%;
+}
+
+#old-tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#old-tweet-text {
+border-bottom: 1px solid black;
+}
+
+#old-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#old-post-photo {
+  width: 20%;
+}
+
+#old-tweet-name {
+  display: flex;
+}
