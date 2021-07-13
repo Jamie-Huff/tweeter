@@ -6,38 +6,34 @@
   width: 60%;
   transition: box-shadow .3s;
 }
-
-#old-tweet-section:hover {
-  box-shadow: 0 5px 200px rgba(0,0,0,0.3); 
-}
+    #old-tweet-section:hover {
+      box-shadow: 0 5px 200px rgba(0,0,0,0.3); 
+    }
 
 #old-tweet-header {
   display: flex;
   justify-content: space-between;
 }
 
-#old-tweet-text {
-border-bottom: 1px solid black;
-}
-
-#old-tweet-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-#old-tweet-profile-photo {
-  width: 30%;
-  height: auto;
-}
-
 #old-tweet-name {
   display: flex;
   padding-bottom: 20px;
 }
+    #old-tweet-name-text {
+      padding-left: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    #old-tweet-profile-photo {
+      width: 30%;
+      height: auto;
+    }
 
-#old-tweet-name-text {
-  padding-left: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
+#old-tweet-handle {
+  color: lightgrey;
+}
+
+#old-tweet-text {
+  border-bottom: 1px solid black;
 }
 
 #post-links {
@@ -53,6 +49,7 @@ border-bottom: 1px solid black;
             color: yellow
           }
 
-#old-tweet-handle {
-  color: lightgrey;
+#old-tweet-footer {
+  display: flex;
+  justify-content: space-between;
 }
