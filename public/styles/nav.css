@@ -1,0 +1,24 @@
+/* 
+<span> within the <nav> uses Bungee as its default font-family
+1.5ems of space on the right and left between the content and the edges */
+
+#top-bar {
+  position: relative;
+  font-family: 'Bungee', cursive;
+  font-size: 30px;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFF;
+  padding: 1.5em;
+}
+
+#top-bar .right {
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#top-bar .down-arrow {
+  color: red;
+  text-align: center;
+}

@@ -1,0 +1,34 @@
+#new-tweet {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  color:rebeccapurple;
+}
+
+#new-tweet-button {
+  background-color: #4056A1;
+  color: #FFF;
+  font-family: 'Bungee', cursive;
+  float: left;
+}
+
+#new-tweet-characters-remaining {
+  font-family: 'Bungee', cursive;
+  color: grey;
+  float: right;
+}
+
+#tweet-text {
+  margin-bottom: 1em;
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: auto;
+  box-shadow: none;
+  background-color: transparent;
+
+  border: 0px solid #000000;
+  border-bottom-width: 1px;
+
+}
