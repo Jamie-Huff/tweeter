@@ -1,5 +1,3 @@
-
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -28,18 +26,28 @@ const createTweetElement = function(tweetData) {
     </footer>
   </article>
   `
-
   return $html
   }
-
 
 //$('#old-tweet-section').append(createTweetElement(tweetData));
 
   const renderTweets = function(tweetsArray) {
     for (let i = 0; i < tweetsArray.length; i++) {
-      $('#old-tweet-section').prepend(createTweetElement(tweetsArray[i]))
+      let valHold = createTweetElement(tweetsArray[i])
+      $('#old-tweet-section').prepend(valHold)
     }
   }
+
+  const loadTweets = () => {
+    $.ajax('/tweets/', { method: "GET" })
+    .then((result) => {
+      $('#old-tweet-section').empty()
+      tweetClearer()
+      renderTweets(result)
+    })
+  }
+
+  loadTweets()
 
   $("#post-tweet").on('submit', function(event) {
     event.preventDefault()
@@ -50,19 +58,19 @@ const createTweetElement = function(tweetData) {
       return alert ("Error: Tweet cannot be empty.")
     } else {
     $.ajax('/tweets/', { method: "POST", data: $(`#tweet-text`)})
-    .then(
-      $('#old-tweet-section').empty(),
-      loadTweets(renderTweets)
-      )
+    .then(() => {
+      loadTweets()
+    })
   }})
 
-
-  const loadTweets = (done) => {
-    $.ajax('/tweets/', { method: "GET"})
-    .then(res => done(res))
+  const tweetClearer = function() {
+    $("#tweet-text").val('')
+    $("#new-tweet-characters-remaining").text(140)
   }
+
+  
   // this will load tweets on page load
-  loadTweets(renderTweets)
+  
 
 })
 
