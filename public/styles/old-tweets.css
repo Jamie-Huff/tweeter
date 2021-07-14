@@ -1,12 +1,17 @@
 #old-tweet-section {
-  border: 2px solid black;
   margin-top: 100px;
   padding: 20px;
-  padding-bottom: 0px;
   width: 60%;
-  transition: box-shadow .3s;
 }
-#old-tweet-section:hover {
+
+#old-tweet-article{
+  border: 2px solid black;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  transition: box-shadow .3s;
+  margin-bottom: 20px;
+}
+#old-tweet-article:hover {
   box-shadow: 7px 7px 5px 0 rgb(0 0 0 / 30%);
 }
 
@@ -24,23 +29,30 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 #old-tweet-profile-photo {
-  width: 30%;
-  height: auto;
+  margin-left: 20px;
 }
 
 #old-tweet-handle {
+  margin-right: 20px;
   color: lightgrey;
 }
 
 #old-tweet-text {
+  margin-left: 20px;
+  width: 95%;
   border-bottom: 1px solid black;
 }
 
 #post-links {
+  margin-right: 20px;
   color: blue
 }
 #post-links i:hover {
-  color: yellow
+  color: #33cccc
+}
+
+#post-created-date {
+  margin-left: 20px;
 }
 
 #old-tweet-footer {
