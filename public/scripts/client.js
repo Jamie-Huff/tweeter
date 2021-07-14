@@ -32,7 +32,7 @@ const createTweetElement = function(tweetData) {
   return $html
   }
 
-  const data = [
+  const data = [ 
     {
       "user": {
         "name": "Newton",
@@ -61,8 +61,26 @@ const createTweetElement = function(tweetData) {
 
   const renderTweets = function(tweetsArray) {
     for (let i = 0; i < tweetsArray.length; i++) {
-      $('#old-tweet-section').append(createTweetElement(tweetsArray[i]))
+      $('#old-tweet-section').prepend(createTweetElement(tweetsArray[i]))
     }
   }
-  renderTweets(data)
+
+  $("#post-tweet").on('submit', function(event) {
+    event.preventDefault()
+    $.ajax('/tweets/', { method: "POST", data: $(`#tweet-text`)})
+    .then(
+      $('#old-tweet-section').empty(),
+      loadTweets(renderTweets)
+      )
+  })
+
+  const loadTweets = (done) => {
+    $.ajax('/tweets/', { method: "GET"})
+    .then(res => done(res))
+  }
+  // this will load tweets on page load
+  loadTweets(renderTweets)
+
 })
+
+
