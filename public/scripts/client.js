@@ -18,7 +18,7 @@ const createTweetElement = function(tweetData) {
   </header>
   <div id="old-tweet-text">${tweetData.content.text}</div>
   <footer id="old-tweet-footer">
-    <div id="post-created-date">${tweetData.created_at}</div>
+    <div id="post-created-date">${timeago.format(tweetData.created_at)}</div>
     <div id="post-links">
       <i id='post-report' class="fas fa-flag"></i>
       <i id='post-retweet' class="fas fa-retweet"></i>
@@ -42,4 +42,5 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+//$('#old-tweet-section').append(createTweetElement(tweetData));
 })
