@@ -6,9 +6,9 @@
   width: 60%;
   transition: box-shadow .3s;
 }
-    #old-tweet-section:hover {
-      box-shadow: 0 5px 200px rgba(0,0,0,0.3); 
-    }
+#old-tweet-section:hover {
+  box-shadow: 7px 7px 5px 0 rgb(0 0 0 / 30%);
+}
 
 #old-tweet-header {
   display: flex;
@@ -19,14 +19,14 @@
   display: flex;
   padding-bottom: 20px;
 }
-    #old-tweet-name-text {
-      padding-left: 20px;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-    #old-tweet-profile-photo {
-      width: 30%;
-      height: auto;
-    }
+#old-tweet-name-text {
+  padding-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#old-tweet-profile-photo {
+  width: 30%;
+  height: auto;
+}
 
 #old-tweet-handle {
   color: lightgrey;
@@ -39,17 +39,12 @@
 #post-links {
   color: blue
 }
-          #post-report:hover {
-            color: yellow
-          }
-          #post-retweet:hover {
-            color: yellow
-          }
-          #post-like:hover {
-            color: yellow
-          }
+#post-links i:hover {
+  color: yellow
+}
 
 #old-tweet-footer {
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
 }
