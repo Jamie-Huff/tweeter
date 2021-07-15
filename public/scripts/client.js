@@ -25,61 +25,60 @@ const createTweetElement = function(tweetData) {
       </div>
     </footer>
   </article>
-  `
-  return $html
-  }
+  `;
+  return $html;
+  };
 
-//$('#old-tweet-section').append(createTweetElement(tweetData));
+  const createErrorMessage = function(error) {
+    const $errorMessage = error;
+    $('#error-message').append($errorMessage);
+  }
 
   const renderTweets = function(tweetsArray) {
     for (let i = 0; i < tweetsArray.length; i++) {
-      let valHold = createTweetElement(tweetsArray[i])
-      $('#old-tweet-section').prepend(valHold)
+      let valHold = createTweetElement(tweetsArray[i]);
+      $('#old-tweet-section').prepend(valHold);
     }
-  }
+  };
 
   const loadTweets = () => {
     $.ajax('/tweets/', { method: "GET" })
     .then((result) => {
-      $('#old-tweet-section').empty()
-      tweetClearer()
-      renderTweets(result)
-    })
+      $('#old-tweet-section').empty();
+      tweetClearer();
+      createErrorMessage('');
+      renderTweets(result);
+    });
   }
 
-  loadTweets()
+  loadTweets();
 
   $("#post-tweet").on('submit', function(event) {
-    event.preventDefault()
-
+    event.preventDefault();
+    $("#error-message").empty();
     if ($("#tweet-text").val().length > 140) {
-      return alert ("Error: Tweet length exceeds maximum allowed.")
+      return createErrorMessage("Error: Tweet length exceeds maximum allowed.");
     } 
     if ($("#tweet-text").val().length === 0 || $("#tweet-text").val().length === null) {
-      return alert ("Error: Tweet cannot be empty.")
+      return createErrorMessage('Error: Tweet cannot be empty.');
     } else {
     $.ajax('/tweets/', { method: "POST", data: $(`#tweet-text`)})
     .then(() => {
-      loadTweets()
+      loadTweets();
     })
   }})
   
 
   const tweetClearer = function() {
-    $("#tweet-text").val('')
-    $("#new-tweet-characters-remaining").text(140)
+    $("#tweet-text").val('');
+    $("#new-tweet-characters-remaining").text(140);
   }
-
-  
-  // this will load tweets on page load
 
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
-
 })
 
 
