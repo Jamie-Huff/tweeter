@@ -15,7 +15,7 @@ const createTweetElement = function(tweetData) {
       </div>
       <h4 id="old-tweet-handle">${tweetData.user.handle}</h4>
     </header>
-    <div id="old-tweet-text">${tweetData.content.text}</div>
+    <div id="old-tweet-text">${escape(tweetData.content.text)}</div>
     <footer id="old-tweet-footer">
       <div id="post-created-date">${timeago.format(tweetData.created_at)}</div>
       <div id="post-links">
@@ -51,6 +51,7 @@ const createTweetElement = function(tweetData) {
 
   $("#post-tweet").on('submit', function(event) {
     event.preventDefault()
+
     if ($("#tweet-text").val().length > 140) {
       return alert ("Error: Tweet length exceeds maximum allowed.")
     } 
@@ -62,6 +63,7 @@ const createTweetElement = function(tweetData) {
       loadTweets()
     })
   }})
+  
 
   const tweetClearer = function() {
     $("#tweet-text").val('')
@@ -70,6 +72,12 @@ const createTweetElement = function(tweetData) {
 
   
   // this will load tweets on page load
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
 
 })
