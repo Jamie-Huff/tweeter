@@ -14,3 +14,35 @@
 #user-ID {
   color: #FFFF
 }
+
+@media only screen and (min-width: 1020px) {
+  #top-head {
+    margin-top: 100px;
+    margin-left: 100px; 
+    height: auto;
+    width: 30%;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+  }
+
+  #user-photo{
+    margin-top: 20px;
+  }
+
+  #user-ID {
+    margin-top: 0px;
+  }
+
+  .container {
+    margin-left: 0px;
+    display: flex;
+    float: right;
+    width: 60%;
+  }
+
+  #newTweet {
+    width: 100%;
+  }
+
+}
