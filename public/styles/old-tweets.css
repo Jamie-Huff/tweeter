@@ -5,7 +5,8 @@
 }
 
 #old-tweet-article{
-  border: 3px solid grey;
+  border: 3px solid #373737;
+  border-radius: 25px;
   padding-bottom: 20px;
   padding-top: 10px;
   transition: box-shadow .3s;
@@ -34,7 +35,7 @@
 
 #old-tweet-handle {
   margin-right: 20px;
-  color: lightgrey;
+  color: #373737;
 }
 
 #old-tweet-text {

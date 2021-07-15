@@ -1,4 +1,5 @@
 #new-tweet {
+  padding-top: 30px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -13,12 +14,11 @@
 
 #new-tweet-characters-remaining {
   font-family: 'Bungee', cursive;
-  color: grey;
+  color: #373737;
   float: right;
 }
 
 #tweet-text {
-  margin-bottom: 1em;
   width: 100%;
   outline: none;
   border: none;
@@ -26,7 +26,8 @@
   overflow: auto;
   box-shadow: none;
   background-color: transparent;
+  padding-top: 1px;
 
-  border: 0px solid #000000;
-  border-bottom-width: 1px;
+  border: 0px solid #373737;
+  border-bottom-width: 2px;
 }
