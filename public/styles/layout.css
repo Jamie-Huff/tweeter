@@ -41,3 +41,15 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 1020px) {
+
+  .container {
+    max-width: 1500px;
+    margin-top: 65px;
+    margin-left: 0px;
+    display: flex;
+    float: right;
+    width: 60%;
+  }
+}
