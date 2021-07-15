@@ -31,7 +31,7 @@ const createTweetElement = function(tweetData) {
 
   const createErrorMessage = function(error) {
     const $errorMessage = error;
-    $('#error-message').append($errorMessage);
+      $('#error-message').text($errorMessage);
   }
 
   const renderTweets = function(tweetsArray) {
@@ -55,7 +55,6 @@ const createTweetElement = function(tweetData) {
 
   $("#post-tweet").on('submit', function(event) {
     event.preventDefault();
-    $("#error-message").empty();
     if ($("#tweet-text").val().length > 140) {
       return createErrorMessage("Error: Tweet length exceeds maximum allowed.");
     } 
