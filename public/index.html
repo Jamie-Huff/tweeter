@@ -29,6 +29,7 @@
   </head>
 
   <body>
+    
     <!-- Top nav bar (fixed) -->
     <nav id="top-bar">
       <span>tweeter</span>
@@ -48,12 +49,14 @@
 
     <main class="container">
       <section class="new-tweet" id="new-tweet">
+        <h2 id="new-tweet-title">Compose Tweet</h2>
         <div id="error-message"></div>
         <form id="post-tweet" action="/tweets/" method="POST">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit" id="new-tweet-button">Tweet</button>
+            
             <output name="counter" class="counter" for="tweet-text" id="new-tweet-characters-remaining">140</output>
           </div>
         </form>
