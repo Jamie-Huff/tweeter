@@ -31,3 +31,13 @@
   border: 0px solid #373737;
   border-bottom-width: 2px;
 }
+
+#error-message {
+ color: red; 
+ text-align: center;
+}
+
+#new-tweet:error-message {
+  overflow: hidden;
+  height: 50px;
+}
