@@ -24,3 +24,13 @@
   color: red;
   text-align: center;
 }
+
+@media only screen and (max-width: 500px) {
+  #top-bar {
+    text-align: center;
+  }
+
+  #top-bar .right {
+    display: none;
+  }
+}
