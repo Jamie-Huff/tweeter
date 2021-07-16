@@ -2,7 +2,12 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Tweeter allows users to make a post up to a maximum of 140 characters.
+Tweets are assigned an automatically generated username, and handle to be associated with that specific tweet.
+
+Tweets are displayed on the page in order from most recent -> oldest.
+
+Tweeter's format changes depending on the screen size of the user allowing increased responsivness. 
 
 ## Getting Started
 

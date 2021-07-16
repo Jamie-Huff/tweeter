@@ -32,15 +32,17 @@
 }
 
 #error-message {
-  font-family: "Bungee", cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: auto;
   color: red; 
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
   font-size: 20px;
 }
 
 #new-tweet-title {
   font-family: "Bungee", cursive;
+  padding-bottom: 0;
 }
 
 #new-tweet-button {
