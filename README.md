@@ -9,6 +9,9 @@ Tweets are displayed on the page in order from most recent -> oldest.
 
 Tweeter's format changes depending on the screen size of the user allowing increased responsivness. 
 
+!["Showcasing the tweeter homepage"](https://github.com/Jamie-Huff/tweeter/blob/master/docs/tweeterHome.png)
+!["Tweeter homepage on a tablet"](https://github.com/Jamie-Huff/tweeter/blob/master/docs/tweeterTablet.png)
+!["trying to create a tweet thats too long!"](https://github.com/Jamie-Huff/tweeter/blob/master/docs/longTweet.png)
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
